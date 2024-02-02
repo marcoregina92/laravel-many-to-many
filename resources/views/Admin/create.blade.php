@@ -3,7 +3,7 @@
 @section('content')
     <div class="container-fluid mt-4">
         <div class="row justify-content-center">
-            <h2>Nuova pasta</h2>
+            <h2>Aggiungi un Portfolio</h2>
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -42,6 +42,7 @@
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
+                <p>{{ $portfolio->technologies }}</p>
                 <button type="submit" class="btn btn-primary">Inserisci</button>
             </form>
         </div>
