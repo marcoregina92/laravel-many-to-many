@@ -16,6 +16,9 @@
         <h1>{{ $portfolios_item->title }}</h1>
         <p>{{ $portfolios_item->description }}</p>
         <p>{{ $portfolios_item->type->title }}</p>
+        @foreach ($portfolios_item->technologies as $technology)
+            <p>{{ $technology->name }}</p>
+        @endforeach
         <img src="{{ $portfolios_item->thumb }}" alt="">
         <button> <a href="{{ route('admin.portfolios.edit', $portfolios_item['id']) }}">MODIFICA</a></button>
         <form action="{{ route('admin.portfolios.destroy', $portfolios_item['id']) }}" method="POST">
@@ -24,6 +27,7 @@
             <input type="submit" value="Elimina">
         </form>
     @endforeach
+
 </body>
 
 

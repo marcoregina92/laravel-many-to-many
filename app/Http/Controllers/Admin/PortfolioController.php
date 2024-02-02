@@ -16,7 +16,9 @@ class PortfolioController extends Controller
     public function index()
     {
         $portfolios = Portfolio::all();
-        return view("admin.index", compact("portfolios"));
+        $technologies = Technology::all();
+
+        return view("admin.index", compact("portfolios", "technologies"));
     }
 
     /**

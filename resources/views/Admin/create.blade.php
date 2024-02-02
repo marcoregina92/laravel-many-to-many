@@ -42,7 +42,10 @@
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
-                <p>{{ $technologies }}</p>
+                @foreach ($technologies as $technology)
+                    <p>{{ $technology->name }}</p>
+                    {{-- <option value="{{ $tag->id }}">{{ $tag->name }}</option> --}}
+                @endforeach
                 <button type="submit" class="btn btn-primary">Inserisci</button>
             </form>
         </div>
