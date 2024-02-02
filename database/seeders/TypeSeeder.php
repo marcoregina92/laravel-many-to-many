@@ -34,13 +34,5 @@ class TypeSeeder extends Seeder
             $newType->save();
 
         }
-        
-        // for($i=0; $i<sizeof($portfolios); $i++){
-        //     $new_portfolio = new Portfolio();
-        //     $new_portfolio->title = $portfolios[$i]["title"];
-        //     $new_portfolio->description = $portfolios[$i]["description"];
-        //     $new_portfolio->thumb = $portfolios[$i]["thumb"];
-        //     $new_portfolio->save();
-        // }
     }
 }
