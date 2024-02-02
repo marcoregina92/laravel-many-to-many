@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Portfolio;
+use App\Models\Technology;
+use App\Models\Type;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -22,7 +24,8 @@ class PortfolioController extends Controller
      */
     public function create()
     {
-        return view("admin.create");
+        $technologies = Technology::all();
+        return view("admin.create", compact("technologies"));
     }
 
     /**

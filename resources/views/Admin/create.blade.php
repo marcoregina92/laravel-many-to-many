@@ -42,7 +42,7 @@
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
-                <p>{{ $portfolio->technologies }}</p>
+                <p>{{ $technologies }}</p>
                 <button type="submit" class="btn btn-primary">Inserisci</button>
             </form>
         </div>
