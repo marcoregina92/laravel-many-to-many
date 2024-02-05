@@ -9,10 +9,10 @@ class Type extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        "title",
-        "description",
-    ];
+    // protected $fillable = [
+    //     "title",
+    //     "description",
+    // ];
 
     public function portfolios() {
         return $this->hasMany(Portfolio::class);

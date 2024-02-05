@@ -15,10 +15,11 @@ class PortfolioController extends Controller
      */
     public function index()
     {
+        $types = Type::all();
         $portfolios = Portfolio::all();
         $technologies = Technology::all();
 
-        return view("admin.index", compact("portfolios", "technologies"));
+        return view("admin.index", compact("portfolios", "technologies", "types"));
     }
 
     /**
@@ -26,8 +27,10 @@ class PortfolioController extends Controller
      */
     public function create()
     {
+        $types = Type::all();
+        $portfolios = Portfolio::all();
         $technologies = Technology::all();
-        return view("admin.create", compact("technologies"));
+        return view("admin.create", compact("portfolios", "technologies", "types"));
     }
 
     /**
